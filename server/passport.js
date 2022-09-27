@@ -30,6 +30,7 @@ passport.deserializeUser(async (id, done) => {
       // https://stackoverflow.com/questions/71766957/delete-the-session-of-a-logged-in-user-which-is-later-deleted-by-the-admin
       return done(null, null);
     }
+    await user.updateSeenAt();
     done(null, user);
   } catch (error) {
     done(error, null);
