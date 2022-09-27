@@ -1,0 +1,4 @@
+.env
+notes.txt
+dist/
+node_modules/
